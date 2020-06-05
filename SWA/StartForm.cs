@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace SWA
 {
-    public partial class Form1 : Form
+    public partial class StartForm : MetroForm
     {
-        public Form1()
+        public StartForm()
         {
             InitializeComponent();
+        }
+
+        private void metroTileStudents_Click(object sender, EventArgs e)
+        {
+            var Form = new StudentForm();
+            Form.Show();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SWA.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202006042233117_DataMigration"; }
+            get { return "202006051714592_DataMigration"; }
         }
         
         string IMigrationMetadata.Source

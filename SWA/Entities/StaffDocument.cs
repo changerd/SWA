@@ -8,7 +8,7 @@ namespace SWA.Entities
 {
     public class StaffDocument
     {
-        public int StaffDocumentId { get; set; }
+        public string StaffDocumentId { get; set; }
         public string StaffDocumentName { get; set; }
         public string StaffDocumentDescription { get; set; }
         public string StaffDoucmentCorrespondence { get; set; }
@@ -16,10 +16,7 @@ namespace SWA.Entities
         public DateTime StaffDocumentDateCreation { get; set; }
         public int StaffId { get; set; }
         public Staff Staff { get; set; }
-        public virtual ICollection<DocumentType> DocumentTypes { get; set; }
-        public StaffDocument()
-        {
-            DocumentTypes = new List<DocumentType>();
-        }
+        public int DocumentTypeId { get; set; }
+        public DocumentType DocumentType { get; set; }
     }
 }

@@ -16,6 +16,8 @@ namespace SWA.Entities
         public string StaffGender { get; set; }
         public string StaffAdress { get; set; }
         public string StaffTelephone { get; set; }
+        public int PositionId { get; set; }
+        public Position Position { get; set; }
         public virtual ICollection<Work> Works { get; set; }
         public virtual ICollection<Fact> Facts { get; set; }
         public virtual ICollection<StaffDocument> StaffDocuments { get; set; }
