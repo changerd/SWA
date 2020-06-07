@@ -76,10 +76,10 @@ namespace SWA
                     }
 
                     await context.SaveChangesAsync();
+                    sf.StudyFormsTable(await context.StudyForms.ToListAsync());
                 }
                 MessageBox.Show(MesAccept, "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();                
-                sf.metroTabControl1_SelectedIndexChanged(sender, e);
             }
             catch (Exception gg)
             {

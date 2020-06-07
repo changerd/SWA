@@ -30,34 +30,37 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageStudents = new MetroFramework.Controls.MetroTabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.metroTabPageService = new MetroFramework.Controls.MetroTabPage();
-            this.dataGridViewStudyForm = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.dataGridViewGroup = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSpecialty = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStudyForm = new System.Windows.Forms.DataGridView();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSearch = new MetroFramework.Controls.MetroTextBox();
+            this.buttonStudentDocuments = new System.Windows.Forms.Button();
+            this.buttonStudentDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.buttonStudentEdit = new System.Windows.Forms.Button();
+            this.buttonStudentAdd = new System.Windows.Forms.Button();
+            this.buttonGroupDelete = new System.Windows.Forms.Button();
+            this.buttonGroupEdit = new System.Windows.Forms.Button();
+            this.buttonGroupAdd = new System.Windows.Forms.Button();
+            this.buttonSpecialtyDelete = new System.Windows.Forms.Button();
+            this.buttonSpecialtyEdit = new System.Windows.Forms.Button();
+            this.buttonSpecialtyAdd = new System.Windows.Forms.Button();
             this.buttonStudyFormDelete = new System.Windows.Forms.Button();
             this.buttonStudyFormEdit = new System.Windows.Forms.Button();
             this.buttonStudyFormAdd = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPageStudents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             this.metroTabPageService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpecialty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudyForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -66,7 +69,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPageService);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1154, 514);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabControl1.TabIndex = 1;
@@ -74,11 +77,14 @@
             // 
             // metroTabPageStudents
             // 
-            this.metroTabPageStudents.Controls.Add(this.button3);
+            this.metroTabPageStudents.Controls.Add(this.buttonStudentDocuments);
+            this.metroTabPageStudents.Controls.Add(this.metroTextBoxSearch);
+            this.metroTabPageStudents.Controls.Add(this.metroLabel4);
+            this.metroTabPageStudents.Controls.Add(this.buttonStudentDelete);
             this.metroTabPageStudents.Controls.Add(this.button4);
-            this.metroTabPageStudents.Controls.Add(this.button2);
-            this.metroTabPageStudents.Controls.Add(this.button1);
-            this.metroTabPageStudents.Controls.Add(this.dataGridView1);
+            this.metroTabPageStudents.Controls.Add(this.buttonStudentEdit);
+            this.metroTabPageStudents.Controls.Add(this.buttonStudentAdd);
+            this.metroTabPageStudents.Controls.Add(this.dataGridViewStudent);
             this.metroTabPageStudents.HorizontalScrollbarBarColor = true;
             this.metroTabPageStudents.Location = new System.Drawing.Point(4, 35);
             this.metroTabPageStudents.Name = "metroTabPageStudents";
@@ -87,28 +93,29 @@
             this.metroTabPageStudents.Text = "Студенты";
             this.metroTabPageStudents.VerticalScrollbarBarColor = true;
             // 
-            // dataGridView1
+            // dataGridViewStudent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1013, 343);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudent.Location = new System.Drawing.Point(3, 35);
+            this.dataGridViewStudent.Name = "dataGridViewStudent";
+            this.dataGridViewStudent.Size = new System.Drawing.Size(1140, 437);
+            this.dataGridViewStudent.TabIndex = 2;
+            this.dataGridViewStudent.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent_CellDoubleClick);
             // 
             // metroTabPageService
             // 
             this.metroTabPageService.Controls.Add(this.metroLabel3);
             this.metroTabPageService.Controls.Add(this.metroLabel2);
             this.metroTabPageService.Controls.Add(this.metroLabel1);
-            this.metroTabPageService.Controls.Add(this.dataGridView4);
-            this.metroTabPageService.Controls.Add(this.dataGridView3);
+            this.metroTabPageService.Controls.Add(this.dataGridViewGroup);
+            this.metroTabPageService.Controls.Add(this.dataGridViewSpecialty);
             this.metroTabPageService.Controls.Add(this.dataGridViewStudyForm);
-            this.metroTabPageService.Controls.Add(this.button13);
-            this.metroTabPageService.Controls.Add(this.button12);
-            this.metroTabPageService.Controls.Add(this.button11);
-            this.metroTabPageService.Controls.Add(this.button10);
-            this.metroTabPageService.Controls.Add(this.button9);
-            this.metroTabPageService.Controls.Add(this.button8);
+            this.metroTabPageService.Controls.Add(this.buttonGroupDelete);
+            this.metroTabPageService.Controls.Add(this.buttonGroupEdit);
+            this.metroTabPageService.Controls.Add(this.buttonGroupAdd);
+            this.metroTabPageService.Controls.Add(this.buttonSpecialtyDelete);
+            this.metroTabPageService.Controls.Add(this.buttonSpecialtyEdit);
+            this.metroTabPageService.Controls.Add(this.buttonSpecialtyAdd);
             this.metroTabPageService.Controls.Add(this.buttonStudyFormDelete);
             this.metroTabPageService.Controls.Add(this.buttonStudyFormEdit);
             this.metroTabPageService.Controls.Add(this.buttonStudyFormAdd);
@@ -117,52 +124,8 @@
             this.metroTabPageService.Name = "metroTabPageService";
             this.metroTabPageService.Size = new System.Drawing.Size(1146, 475);
             this.metroTabPageService.TabIndex = 1;
-            this.metroTabPageService.Text = "Служебное";
+            this.metroTabPageService.Text = "Служебная инофрмация";
             this.metroTabPageService.VerticalScrollbarBarColor = true;
-            // 
-            // dataGridViewStudyForm
-            // 
-            this.dataGridViewStudyForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudyForm.Location = new System.Drawing.Point(3, 35);
-            this.dataGridViewStudyForm.Name = "dataGridViewStudyForm";
-            this.dataGridViewStudyForm.Size = new System.Drawing.Size(376, 437);
-            this.dataGridViewStudyForm.TabIndex = 5;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(385, 35);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(376, 437);
-            this.dataGridView3.TabIndex = 9;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(767, 35);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(376, 437);
-            this.dataGridView4.TabIndex = 13;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 3);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(148, 25);
-            this.metroLabel1.TabIndex = 14;
-            this.metroLabel1.Text = "Формы обучения";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(385, 3);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(133, 25);
-            this.metroLabel2.TabIndex = 15;
-            this.metroLabel2.Text = "Специальности";
             // 
             // metroLabel3
             // 
@@ -174,14 +137,85 @@
             this.metroLabel3.TabIndex = 16;
             this.metroLabel3.Text = "Группы";
             // 
-            // button3
+            // metroLabel2
             // 
-            this.button3.Image = global::SWA.Properties.Resources.garbage_container;
-            this.button3.Location = new System.Drawing.Point(77, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 26);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = true;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(385, 3);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(133, 25);
+            this.metroLabel2.TabIndex = 15;
+            this.metroLabel2.Text = "Специальности";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 3);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(148, 25);
+            this.metroLabel1.TabIndex = 14;
+            this.metroLabel1.Text = "Формы обучения";
+            // 
+            // dataGridViewGroup
+            // 
+            this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGroup.Location = new System.Drawing.Point(767, 35);
+            this.dataGridViewGroup.Name = "dataGridViewGroup";
+            this.dataGridViewGroup.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewGroup.TabIndex = 13;
+            // 
+            // dataGridViewSpecialty
+            // 
+            this.dataGridViewSpecialty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSpecialty.Location = new System.Drawing.Point(385, 35);
+            this.dataGridViewSpecialty.Name = "dataGridViewSpecialty";
+            this.dataGridViewSpecialty.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewSpecialty.TabIndex = 9;
+            // 
+            // dataGridViewStudyForm
+            // 
+            this.dataGridViewStudyForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudyForm.Location = new System.Drawing.Point(3, 35);
+            this.dataGridViewStudyForm.Name = "dataGridViewStudyForm";
+            this.dataGridViewStudyForm.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewStudyForm.TabIndex = 5;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(909, 10);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel4.TabIndex = 7;
+            this.metroLabel4.Text = "Поиск:";
+            // 
+            // metroTextBoxSearch
+            // 
+            this.metroTextBoxSearch.Location = new System.Drawing.Point(965, 6);
+            this.metroTextBoxSearch.Name = "metroTextBoxSearch";
+            this.metroTextBoxSearch.Size = new System.Drawing.Size(178, 23);
+            this.metroTextBoxSearch.TabIndex = 8;
+            // 
+            // buttonStudentDocuments
+            // 
+            this.buttonStudentDocuments.Image = global::SWA.Properties.Resources.portable_document_format;
+            this.buttonStudentDocuments.Location = new System.Drawing.Point(151, 3);
+            this.buttonStudentDocuments.Name = "buttonStudentDocuments";
+            this.buttonStudentDocuments.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentDocuments.TabIndex = 9;
+            this.buttonStudentDocuments.UseVisualStyleBackColor = true;
+            this.buttonStudentDocuments.Click += new System.EventHandler(this.buttonStudentDocuments_Click);
+            // 
+            // buttonStudentDelete
+            // 
+            this.buttonStudentDelete.Image = global::SWA.Properties.Resources.garbage_container;
+            this.buttonStudentDelete.Location = new System.Drawing.Point(77, 3);
+            this.buttonStudentDelete.Name = "buttonStudentDelete";
+            this.buttonStudentDelete.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentDelete.TabIndex = 5;
+            this.buttonStudentDelete.UseVisualStyleBackColor = true;
+            this.buttonStudentDelete.Click += new System.EventHandler(this.buttonStudentDelete_Click);
             // 
             // button4
             // 
@@ -192,77 +226,85 @@
             this.button4.TabIndex = 6;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonStudentEdit
             // 
-            this.button2.Image = global::SWA.Properties.Resources.edit;
-            this.button2.Location = new System.Drawing.Point(40, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 26);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonStudentEdit.Image = global::SWA.Properties.Resources.edit;
+            this.buttonStudentEdit.Location = new System.Drawing.Point(40, 3);
+            this.buttonStudentEdit.Name = "buttonStudentEdit";
+            this.buttonStudentEdit.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentEdit.TabIndex = 4;
+            this.buttonStudentEdit.UseVisualStyleBackColor = true;
+            this.buttonStudentEdit.Click += new System.EventHandler(this.buttonStudentEdit_Click);
             // 
-            // button1
+            // buttonStudentAdd
             // 
-            this.button1.Image = global::SWA.Properties.Resources.plus_sign;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 26);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonStudentAdd.Image = global::SWA.Properties.Resources.plus_sign;
+            this.buttonStudentAdd.Location = new System.Drawing.Point(3, 3);
+            this.buttonStudentAdd.Name = "buttonStudentAdd";
+            this.buttonStudentAdd.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentAdd.TabIndex = 3;
+            this.buttonStudentAdd.UseVisualStyleBackColor = true;
+            this.buttonStudentAdd.Click += new System.EventHandler(this.buttonStudentAdd_Click);
             // 
-            // button13
+            // buttonGroupDelete
             // 
-            this.button13.Image = global::SWA.Properties.Resources.garbage_container;
-            this.button13.Location = new System.Drawing.Point(1112, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(31, 26);
-            this.button13.TabIndex = 12;
-            this.button13.UseVisualStyleBackColor = true;
+            this.buttonGroupDelete.Image = global::SWA.Properties.Resources.garbage_container;
+            this.buttonGroupDelete.Location = new System.Drawing.Point(1112, 3);
+            this.buttonGroupDelete.Name = "buttonGroupDelete";
+            this.buttonGroupDelete.Size = new System.Drawing.Size(31, 26);
+            this.buttonGroupDelete.TabIndex = 12;
+            this.buttonGroupDelete.UseVisualStyleBackColor = true;
+            this.buttonGroupDelete.Click += new System.EventHandler(this.buttonGroupDelete_Click);
             // 
-            // button12
+            // buttonGroupEdit
             // 
-            this.button12.Image = global::SWA.Properties.Resources.edit;
-            this.button12.Location = new System.Drawing.Point(1075, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(31, 26);
-            this.button12.TabIndex = 11;
-            this.button12.UseVisualStyleBackColor = true;
+            this.buttonGroupEdit.Image = global::SWA.Properties.Resources.edit;
+            this.buttonGroupEdit.Location = new System.Drawing.Point(1075, 3);
+            this.buttonGroupEdit.Name = "buttonGroupEdit";
+            this.buttonGroupEdit.Size = new System.Drawing.Size(31, 26);
+            this.buttonGroupEdit.TabIndex = 11;
+            this.buttonGroupEdit.UseVisualStyleBackColor = true;
+            this.buttonGroupEdit.Click += new System.EventHandler(this.buttonGroupEdit_Click);
             // 
-            // button11
+            // buttonGroupAdd
             // 
-            this.button11.Image = global::SWA.Properties.Resources.plus_sign;
-            this.button11.Location = new System.Drawing.Point(1038, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(31, 26);
-            this.button11.TabIndex = 10;
-            this.button11.UseVisualStyleBackColor = true;
+            this.buttonGroupAdd.Image = global::SWA.Properties.Resources.plus_sign;
+            this.buttonGroupAdd.Location = new System.Drawing.Point(1038, 3);
+            this.buttonGroupAdd.Name = "buttonGroupAdd";
+            this.buttonGroupAdd.Size = new System.Drawing.Size(31, 26);
+            this.buttonGroupAdd.TabIndex = 10;
+            this.buttonGroupAdd.UseVisualStyleBackColor = true;
+            this.buttonGroupAdd.Click += new System.EventHandler(this.buttonGroupAdd_Click);
             // 
-            // button10
+            // buttonSpecialtyDelete
             // 
-            this.button10.Image = global::SWA.Properties.Resources.garbage_container;
-            this.button10.Location = new System.Drawing.Point(730, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 26);
-            this.button10.TabIndex = 8;
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyDelete.Image = global::SWA.Properties.Resources.garbage_container;
+            this.buttonSpecialtyDelete.Location = new System.Drawing.Point(730, 3);
+            this.buttonSpecialtyDelete.Name = "buttonSpecialtyDelete";
+            this.buttonSpecialtyDelete.Size = new System.Drawing.Size(31, 26);
+            this.buttonSpecialtyDelete.TabIndex = 8;
+            this.buttonSpecialtyDelete.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyDelete.Click += new System.EventHandler(this.buttonSpecialtyDelete_Click);
             // 
-            // button9
+            // buttonSpecialtyEdit
             // 
-            this.button9.Image = global::SWA.Properties.Resources.edit;
-            this.button9.Location = new System.Drawing.Point(693, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(31, 26);
-            this.button9.TabIndex = 7;
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyEdit.Image = global::SWA.Properties.Resources.edit;
+            this.buttonSpecialtyEdit.Location = new System.Drawing.Point(693, 3);
+            this.buttonSpecialtyEdit.Name = "buttonSpecialtyEdit";
+            this.buttonSpecialtyEdit.Size = new System.Drawing.Size(31, 26);
+            this.buttonSpecialtyEdit.TabIndex = 7;
+            this.buttonSpecialtyEdit.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyEdit.Click += new System.EventHandler(this.buttonSpecialtyEdit_Click);
             // 
-            // button8
+            // buttonSpecialtyAdd
             // 
-            this.button8.Image = global::SWA.Properties.Resources.plus_sign;
-            this.button8.Location = new System.Drawing.Point(656, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(31, 26);
-            this.button8.TabIndex = 6;
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyAdd.Image = global::SWA.Properties.Resources.plus_sign;
+            this.buttonSpecialtyAdd.Location = new System.Drawing.Point(656, 3);
+            this.buttonSpecialtyAdd.Name = "buttonSpecialtyAdd";
+            this.buttonSpecialtyAdd.Size = new System.Drawing.Size(31, 26);
+            this.buttonSpecialtyAdd.TabIndex = 6;
+            this.buttonSpecialtyAdd.UseVisualStyleBackColor = true;
+            this.buttonSpecialtyAdd.Click += new System.EventHandler(this.buttonSpecialtyAdd_Click);
             // 
             // buttonStudyFormDelete
             // 
@@ -306,12 +348,13 @@
             this.Load += new System.EventHandler(this.StudentForm_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPageStudents.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.metroTabPageStudents.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).EndInit();
             this.metroTabPageService.ResumeLayout(false);
             this.metroTabPageService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpecialty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudyForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,26 +363,29 @@
 
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPageStudents;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewStudent;
         private MetroFramework.Controls.MetroTabPage metroTabPageService;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonStudentAdd;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonStudentDelete;
+        private System.Windows.Forms.Button buttonStudentEdit;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridView dataGridViewGroup;
+        private System.Windows.Forms.Button buttonGroupDelete;
+        private System.Windows.Forms.Button buttonGroupEdit;
+        private System.Windows.Forms.Button buttonGroupAdd;
+        private System.Windows.Forms.DataGridView dataGridViewSpecialty;
+        private System.Windows.Forms.Button buttonSpecialtyDelete;
+        private System.Windows.Forms.Button buttonSpecialtyEdit;
+        private System.Windows.Forms.Button buttonSpecialtyAdd;
         private System.Windows.Forms.DataGridView dataGridViewStudyForm;
         private System.Windows.Forms.Button buttonStudyFormDelete;
         private System.Windows.Forms.Button buttonStudyFormEdit;
         private System.Windows.Forms.Button buttonStudyFormAdd;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxSearch;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.Button buttonStudentDocuments;
     }
 }

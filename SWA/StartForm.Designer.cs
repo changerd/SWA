@@ -53,6 +53,7 @@
             this.metroTileStaff.TabIndex = 1;
             this.metroTileStaff.Text = "Персонал";
             this.metroTileStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileStaff.Click += new System.EventHandler(this.metroTileStaff_Click);
             // 
             // metroTileGeneralDoc
             // 
@@ -61,8 +62,9 @@
             this.metroTileGeneralDoc.Size = new System.Drawing.Size(166, 41);
             this.metroTileGeneralDoc.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTileGeneralDoc.TabIndex = 2;
-            this.metroTileGeneralDoc.Text = "Документы";
+            this.metroTileGeneralDoc.Text = "Общие документы";
             this.metroTileGeneralDoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileGeneralDoc.Click += new System.EventHandler(this.metroTileGeneralDoc_Click);
             // 
             // StartForm
             // 

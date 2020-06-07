@@ -79,9 +79,71 @@
     <Compile Include="Entities\StudentDocument.cs" />
     <Compile Include="Entities\StudyForm.cs" />
     <Compile Include="Entities\Work.cs" />
+    <Compile Include="GroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupEntityForm.Designer.cs">
+      <DependentUpon>GroupEntityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202006052129572_DataMigration1.cs" />
     <Compile Include="Migrations\202006052129572_DataMigration1.designer.cs">
       <DependentUpon>202006052129572_DataMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006061034317_DataMigration2.cs" />
+    <Compile Include="Migrations\202006061034317_DataMigration2.designer.cs">
+      <DependentUpon>202006061034317_DataMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FactEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FactEntityForm.Designer.cs">
+      <DependentUpon>FactEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006071454532_DataMigration3.cs" />
+    <Compile Include="Migrations\202006071454532_DataMigration3.designer.cs">
+      <DependentUpon>202006071454532_DataMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionEntityForm.Designer.cs">
+      <DependentUpon>PositionEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionForm.Designer.cs">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialtyEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialtyEntityForm.Designer.cs">
+      <DependentUpon>SpecialtyEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralDocumentsEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDocumentsEntityForm.Designer.cs">
+      <DependentUpon>GeneralDocumentsEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralDocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDocumentsForm.Designer.cs">
+      <DependentUpon>GeneralDocumentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffEntityForm.Designer.cs">
+      <DependentUpon>StaffEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
@@ -96,6 +158,36 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDocumentsEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDocumentsEntityForm.Designer.cs">
+      <DependentUpon>StaffDocumentsEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDocumentsEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDocumentsEntityForm.Designer.cs">
+      <DependentUpon>StudentDocumentsEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDocumentsForm.Designer.cs">
+      <DependentUpon>StaffDocumentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDocumentsForm.Designer.cs">
+      <DependentUpon>StudentDocumentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEntityForm.Designer.cs">
+      <DependentUpon>StudentEntityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,8 +200,48 @@
     <Compile Include="StudyFormEntityForm.Designer.cs">
       <DependentUpon>StudyFormEntityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\SpecialtyComboBox.cs" />
+    <Compile Include="WorkEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkEntityForm.Designer.cs">
+      <DependentUpon>WorkEntityForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GroupEntityForm.resx">
+      <DependentUpon>GroupEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006052129572_DataMigration1.resx">
       <DependentUpon>202006052129572_DataMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006061034317_DataMigration2.resx">
+      <DependentUpon>202006061034317_DataMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactEntityForm.resx">
+      <DependentUpon>FactEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006071454532_DataMigration3.resx">
+      <DependentUpon>202006071454532_DataMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionEntityForm.resx">
+      <DependentUpon>PositionEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionForm.resx">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialtyEntityForm.resx">
+      <DependentUpon>SpecialtyEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDocumentsEntityForm.resx">
+      <DependentUpon>GeneralDocumentsEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDocumentsForm.resx">
+      <DependentUpon>GeneralDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffEntityForm.resx">
+      <DependentUpon>StaffEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
@@ -127,11 +259,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StaffDocumentsEntityForm.resx">
+      <DependentUpon>StaffDocumentsEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDocumentsEntityForm.resx">
+      <DependentUpon>StudentDocumentsEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDocumentsForm.resx">
+      <DependentUpon>StaffDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDocumentsForm.resx">
+      <DependentUpon>StudentDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEntityForm.resx">
+      <DependentUpon>StudentEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudyFormEntityForm.resx">
       <DependentUpon>StudyFormEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkEntityForm.resx">
+      <DependentUpon>WorkEntityForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,6 +302,8 @@
     <None Include="Icons\edit.png" />
     <None Include="Icons\garbage-container.png" />
     <None Include="Icons\filter.png" />
+    <None Include="Icons\work.png" />
+    <None Include="Icons\portable-document-format.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

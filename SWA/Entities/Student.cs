@@ -16,9 +16,9 @@ namespace SWA.Entities
         public string StudentGender { get; set; }
         public string StudentAdress { get; set; }
         public string StudentTelephone { get; set; }
-        public DateTime AdmissionDate { get; set; }
-        public DateTime GetOutDate { get; set; }
-        public DateTime GraduationDate { get; set; }
+        public DateTime? AdmissionDate { get; set; }
+        public DateTime? GetOutDate { get; set; }
+        public DateTime? GraduationDate { get; set; }
         public int GroupId { get; set; }
         public Group Group { get; set; }
         public virtual ICollection<StudentDocument> StudentDocuments { get; set; }

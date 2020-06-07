@@ -23,6 +23,7 @@ namespace SWA
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<StaffDocument> StaffDocuments { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<StudentDocument> StudentDocuments { get; set; }
         public DbSet<StudyForm> StudyForms { get; set; }
         public DbSet<Work> Works { get; set; }
     }

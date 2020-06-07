@@ -23,5 +23,17 @@ namespace SWA
             var Form = new StudentForm();
             Form.Show();
         }
+
+        private void metroTileStaff_Click(object sender, EventArgs e)
+        {
+            var Form = new StaffForm();
+            Form.Show();
+        }
+
+        private void metroTileGeneralDoc_Click(object sender, EventArgs e)
+        {
+            var Form = new GeneralDocumentsForm();
+            Form.Show();
+        }
     }
 }
