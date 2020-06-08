@@ -20,6 +20,7 @@ namespace SWA
         public StudentDocumentsForm()
         {
             InitializeComponent();
+            dateTimePickerDateFilter.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         public DataTable StudentDocumentsTable(List<StudentDocument> query)

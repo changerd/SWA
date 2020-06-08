@@ -93,6 +93,9 @@
             this.Controls.Add(this.metroComboBoxSpecialty);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(316, 228);
+            this.MinimumSize = new System.Drawing.Size(316, 228);
             this.Name = "StudentPrintForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Печать список студентов";

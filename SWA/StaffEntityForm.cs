@@ -23,6 +23,7 @@ namespace SWA
         public StaffEntityForm()
         {
             InitializeComponent();
+            dateTimePickerBirth.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetPositions()

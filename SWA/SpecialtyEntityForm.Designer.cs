@@ -130,6 +130,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(370, 282);
+            this.MinimumSize = new System.Drawing.Size(370, 282);
             this.Name = "SpecialtyEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "SpecialtyEntityForm";

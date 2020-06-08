@@ -122,6 +122,13 @@ namespace SWA
             //}
         }
 
-        
+        private void metroTextBoxCourse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

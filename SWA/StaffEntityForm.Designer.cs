@@ -195,6 +195,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(464, 313);
+            this.MinimumSize = new System.Drawing.Size(464, 313);
             this.Name = "StaffEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "StaffEntityForm";

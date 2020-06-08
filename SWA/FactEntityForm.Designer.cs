@@ -60,7 +60,7 @@
             this.metroTileAccept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileAccept.Click += new System.EventHandler(this.metroTileAccept_Click);
             // 
-            // PositionEntityForm
+            // FactEntityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,10 @@
             this.Controls.Add(this.metroTileAccept);
             this.Controls.Add(this.metroTextBoxName);
             this.Controls.Add(this.metroLabel1);
-            this.Name = "PositionEntityForm";
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(280, 164);
+            this.MinimumSize = new System.Drawing.Size(280, 164);
+            this.Name = "FactEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "PositionEntityForm";
             this.Load += new System.EventHandler(this.PositionEntityForm_Load);

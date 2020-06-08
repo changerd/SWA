@@ -97,6 +97,7 @@
             this.metroTextBoxCourse.Name = "metroTextBoxCourse";
             this.metroTextBoxCourse.Size = new System.Drawing.Size(146, 23);
             this.metroTextBoxCourse.TabIndex = 7;
+            this.metroTextBoxCourse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBoxCourse_KeyPress);
             // 
             // metroTextBoxEndStudy
             // 
@@ -130,6 +131,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(322, 255);
+            this.MinimumSize = new System.Drawing.Size(322, 255);
             this.Name = "GroupEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "GroupEntityForm";

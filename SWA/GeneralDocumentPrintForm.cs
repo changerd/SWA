@@ -19,6 +19,8 @@ namespace SWA
         public GeneralDocumentPrintForm()
         {
             InitializeComponent();
+            dateTimePickerFirst.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            dateTimePickerSecond.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetDocumentTypes()

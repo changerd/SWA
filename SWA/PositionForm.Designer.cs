@@ -82,6 +82,9 @@
             this.Controls.Add(this.buttonPositionDelete);
             this.Controls.Add(this.buttonPositionEdit);
             this.Controls.Add(this.buttonPositionAdd);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(293, 388);
+            this.MinimumSize = new System.Drawing.Size(293, 388);
             this.Name = "PositionForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Должности";

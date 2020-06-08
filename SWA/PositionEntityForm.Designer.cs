@@ -68,6 +68,9 @@
             this.Controls.Add(this.metroTileAccept);
             this.Controls.Add(this.metroTextBoxName);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(280, 164);
+            this.MinimumSize = new System.Drawing.Size(280, 164);
             this.Name = "PositionEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "PositionEntityForm";

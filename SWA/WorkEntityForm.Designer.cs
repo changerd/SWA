@@ -90,6 +90,9 @@
             this.Controls.Add(this.dateTimePickerDate);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(355, 208);
+            this.MinimumSize = new System.Drawing.Size(355, 208);
             this.Name = "WorkEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "WorkEntityForm";

@@ -19,6 +19,7 @@ namespace SWA
         public GeneralDocumentsForm()
         {
             InitializeComponent();
+            dateTimePickerDateFilter.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         public DataTable GeneralDocumentsTable(List<GeneralDocument> query)

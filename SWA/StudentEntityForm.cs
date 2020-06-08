@@ -23,6 +23,7 @@ namespace SWA
         public StudentEntityForm()
         {
             InitializeComponent();
+            dateTimePickerBirth.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetGroups()

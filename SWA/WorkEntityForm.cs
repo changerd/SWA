@@ -25,6 +25,7 @@ namespace SWA
         public WorkEntityForm()
         {
             InitializeComponent();
+            dateTimePickerDate.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         private void WorkEntityForm_Load(object sender, EventArgs e)

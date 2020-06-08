@@ -128,6 +128,9 @@
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(384, 226);
+            this.MinimumSize = new System.Drawing.Size(384, 226);
             this.Name = "StudentDocumentPrintForm";
             this.Text = "Печать документа";
             this.Load += new System.EventHandler(this.StudentDocumentPrintForm_Load);

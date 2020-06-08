@@ -24,6 +24,7 @@ namespace SWA
         public StudentDocumentsEntityForm()
         {
             InitializeComponent();
+            dateTimePickerDate.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetDocumentTypes()

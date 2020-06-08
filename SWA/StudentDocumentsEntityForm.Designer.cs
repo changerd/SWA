@@ -192,6 +192,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(400, 487);
+            this.MinimumSize = new System.Drawing.Size(400, 487);
             this.Name = "StudentDocumentsEntityForm";
             this.Text = "StudentDocumentsEntityForm";
             this.Load += new System.EventHandler(this.StudentDocumentsEntityForm_Load);

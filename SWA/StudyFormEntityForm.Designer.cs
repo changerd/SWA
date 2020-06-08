@@ -68,6 +68,9 @@
             this.Controls.Add(this.metroTileAccept);
             this.Controls.Add(this.metroTextBoxStudyFormName);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(286, 188);
+            this.MinimumSize = new System.Drawing.Size(286, 188);
             this.Name = "StudyFormEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "StudyFormEntityForm";

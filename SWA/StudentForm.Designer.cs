@@ -30,6 +30,7 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageStudents = new MetroFramework.Controls.MetroTabPage();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonReloadFilter = new System.Windows.Forms.Button();
             this.buttonStudentDocuments = new System.Windows.Forms.Button();
             this.metroTextBoxSearch = new MetroFramework.Controls.MetroTextBox();
@@ -55,7 +56,6 @@
             this.buttonStudyFormDelete = new System.Windows.Forms.Button();
             this.buttonStudyFormEdit = new System.Windows.Forms.Button();
             this.buttonStudyFormAdd = new System.Windows.Forms.Button();
-            this.buttonPrint = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPageStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
@@ -96,6 +96,16 @@
             this.metroTabPageStudents.TabIndex = 0;
             this.metroTabPageStudents.Text = "Студенты";
             this.metroTabPageStudents.VerticalScrollbarBarColor = true;
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Image = global::SWA.Properties.Resources.print;
+            this.buttonPrint.Location = new System.Drawing.Point(188, 3);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(31, 26);
+            this.buttonPrint.TabIndex = 11;
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonReloadFilter
             // 
@@ -177,6 +187,7 @@
             // 
             // dataGridViewStudent
             // 
+            this.dataGridViewStudent.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudent.Location = new System.Drawing.Point(3, 35);
             this.dataGridViewStudent.Name = "dataGridViewStudent";
@@ -213,7 +224,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(767, 3);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 228);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(70, 25);
             this.metroLabel3.TabIndex = 16;
@@ -223,7 +234,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(385, 3);
+            this.metroLabel2.Location = new System.Drawing.Point(268, 4);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(133, 25);
             this.metroLabel2.TabIndex = 15;
@@ -241,32 +252,35 @@
             // 
             // dataGridViewGroup
             // 
+            this.dataGridViewGroup.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGroup.Location = new System.Drawing.Point(767, 35);
+            this.dataGridViewGroup.Location = new System.Drawing.Point(3, 259);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            this.dataGridViewGroup.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewGroup.Size = new System.Drawing.Size(721, 213);
             this.dataGridViewGroup.TabIndex = 13;
             // 
             // dataGridViewSpecialty
             // 
+            this.dataGridViewSpecialty.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewSpecialty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSpecialty.Location = new System.Drawing.Point(385, 35);
+            this.dataGridViewSpecialty.Location = new System.Drawing.Point(268, 35);
             this.dataGridViewSpecialty.Name = "dataGridViewSpecialty";
-            this.dataGridViewSpecialty.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewSpecialty.Size = new System.Drawing.Size(456, 190);
             this.dataGridViewSpecialty.TabIndex = 9;
             // 
             // dataGridViewStudyForm
             // 
+            this.dataGridViewStudyForm.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewStudyForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudyForm.Location = new System.Drawing.Point(3, 35);
             this.dataGridViewStudyForm.Name = "dataGridViewStudyForm";
-            this.dataGridViewStudyForm.Size = new System.Drawing.Size(376, 437);
+            this.dataGridViewStudyForm.Size = new System.Drawing.Size(259, 190);
             this.dataGridViewStudyForm.TabIndex = 5;
             // 
             // buttonGroupDelete
             // 
             this.buttonGroupDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonGroupDelete.Location = new System.Drawing.Point(1112, 3);
+            this.buttonGroupDelete.Location = new System.Drawing.Point(693, 228);
             this.buttonGroupDelete.Name = "buttonGroupDelete";
             this.buttonGroupDelete.Size = new System.Drawing.Size(31, 26);
             this.buttonGroupDelete.TabIndex = 12;
@@ -276,7 +290,7 @@
             // buttonGroupEdit
             // 
             this.buttonGroupEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonGroupEdit.Location = new System.Drawing.Point(1075, 3);
+            this.buttonGroupEdit.Location = new System.Drawing.Point(656, 228);
             this.buttonGroupEdit.Name = "buttonGroupEdit";
             this.buttonGroupEdit.Size = new System.Drawing.Size(31, 26);
             this.buttonGroupEdit.TabIndex = 11;
@@ -286,7 +300,7 @@
             // buttonGroupAdd
             // 
             this.buttonGroupAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonGroupAdd.Location = new System.Drawing.Point(1038, 3);
+            this.buttonGroupAdd.Location = new System.Drawing.Point(619, 228);
             this.buttonGroupAdd.Name = "buttonGroupAdd";
             this.buttonGroupAdd.Size = new System.Drawing.Size(31, 26);
             this.buttonGroupAdd.TabIndex = 10;
@@ -296,7 +310,7 @@
             // buttonSpecialtyDelete
             // 
             this.buttonSpecialtyDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonSpecialtyDelete.Location = new System.Drawing.Point(730, 3);
+            this.buttonSpecialtyDelete.Location = new System.Drawing.Point(693, 3);
             this.buttonSpecialtyDelete.Name = "buttonSpecialtyDelete";
             this.buttonSpecialtyDelete.Size = new System.Drawing.Size(31, 26);
             this.buttonSpecialtyDelete.TabIndex = 8;
@@ -306,7 +320,7 @@
             // buttonSpecialtyEdit
             // 
             this.buttonSpecialtyEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonSpecialtyEdit.Location = new System.Drawing.Point(693, 3);
+            this.buttonSpecialtyEdit.Location = new System.Drawing.Point(656, 3);
             this.buttonSpecialtyEdit.Name = "buttonSpecialtyEdit";
             this.buttonSpecialtyEdit.Size = new System.Drawing.Size(31, 26);
             this.buttonSpecialtyEdit.TabIndex = 7;
@@ -316,7 +330,7 @@
             // buttonSpecialtyAdd
             // 
             this.buttonSpecialtyAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonSpecialtyAdd.Location = new System.Drawing.Point(656, 3);
+            this.buttonSpecialtyAdd.Location = new System.Drawing.Point(619, 3);
             this.buttonSpecialtyAdd.Name = "buttonSpecialtyAdd";
             this.buttonSpecialtyAdd.Size = new System.Drawing.Size(31, 26);
             this.buttonSpecialtyAdd.TabIndex = 6;
@@ -326,7 +340,7 @@
             // buttonStudyFormDelete
             // 
             this.buttonStudyFormDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonStudyFormDelete.Location = new System.Drawing.Point(348, 3);
+            this.buttonStudyFormDelete.Location = new System.Drawing.Point(231, 3);
             this.buttonStudyFormDelete.Name = "buttonStudyFormDelete";
             this.buttonStudyFormDelete.Size = new System.Drawing.Size(31, 26);
             this.buttonStudyFormDelete.TabIndex = 4;
@@ -336,7 +350,7 @@
             // buttonStudyFormEdit
             // 
             this.buttonStudyFormEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonStudyFormEdit.Location = new System.Drawing.Point(311, 3);
+            this.buttonStudyFormEdit.Location = new System.Drawing.Point(194, 3);
             this.buttonStudyFormEdit.Name = "buttonStudyFormEdit";
             this.buttonStudyFormEdit.Size = new System.Drawing.Size(31, 26);
             this.buttonStudyFormEdit.TabIndex = 3;
@@ -346,22 +360,12 @@
             // buttonStudyFormAdd
             // 
             this.buttonStudyFormAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonStudyFormAdd.Location = new System.Drawing.Point(274, 3);
+            this.buttonStudyFormAdd.Location = new System.Drawing.Point(157, 3);
             this.buttonStudyFormAdd.Name = "buttonStudyFormAdd";
             this.buttonStudyFormAdd.Size = new System.Drawing.Size(31, 26);
             this.buttonStudyFormAdd.TabIndex = 2;
             this.buttonStudyFormAdd.UseVisualStyleBackColor = true;
             this.buttonStudyFormAdd.Click += new System.EventHandler(this.buttonStudyFormAdd_Click);
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Image = global::SWA.Properties.Resources.print;
-            this.buttonPrint.Location = new System.Drawing.Point(188, 3);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(31, 26);
-            this.buttonPrint.TabIndex = 11;
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // StudentForm
             // 
@@ -369,6 +373,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.metroTabControl1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1200, 600);
+            this.MinimumSize = new System.Drawing.Size(1200, 600);
             this.Name = "StudentForm";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Студенты";

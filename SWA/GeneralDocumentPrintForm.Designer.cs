@@ -115,7 +115,7 @@
             this.metroTilePrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTilePrint.Click += new System.EventHandler(this.metroTilePrint_Click);
             // 
-            // StudentDocumentPrintForm
+            // GeneralDocumentPrintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,7 +128,10 @@
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel1);
-            this.Name = "StudentDocumentPrintForm";
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(384, 226);
+            this.MinimumSize = new System.Drawing.Size(384, 226);
+            this.Name = "GeneralDocumentPrintForm";
             this.Text = "Печать документа";
             this.Load += new System.EventHandler(this.GeneralDocumentPrintForm_Load);
             this.ResumeLayout(false);

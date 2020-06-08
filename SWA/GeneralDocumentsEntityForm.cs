@@ -23,6 +23,7 @@ namespace SWA
         public GeneralDocumentsEntityForm()
         {
             InitializeComponent();
+            dateTimePickerDate.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetDocumentTypes()

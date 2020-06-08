@@ -70,6 +70,9 @@
             this.Controls.Add(this.metroTileAccept);
             this.Controls.Add(this.metroComboBoxPosition);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(265, 174);
+            this.MinimumSize = new System.Drawing.Size(265, 174);
             this.Name = "StaffFilterForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Фильтр сотрудников";

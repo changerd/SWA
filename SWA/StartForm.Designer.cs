@@ -74,6 +74,9 @@
             this.Controls.Add(this.metroTileGeneralDoc);
             this.Controls.Add(this.metroTileStaff);
             this.Controls.Add(this.metroTileStudents);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(252, 268);
+            this.MinimumSize = new System.Drawing.Size(252, 268);
             this.Name = "StartForm";
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "АРМ Секретаря";

@@ -55,33 +55,36 @@
             // 
             // dataGridViewStaff
             // 
+            this.dataGridViewStaff.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStaff.Location = new System.Drawing.Point(23, 92);
             this.dataGridViewStaff.Name = "dataGridViewStaff";
-            this.dataGridViewStaff.Size = new System.Drawing.Size(1154, 259);
+            this.dataGridViewStaff.Size = new System.Drawing.Size(944, 259);
             this.dataGridViewStaff.TabIndex = 3;
             this.dataGridViewStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStaff_CellClick);
             this.dataGridViewStaff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStaff_CellDoubleClick);
             // 
             // dataGridViewWork
             // 
+            this.dataGridViewWork.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWork.Location = new System.Drawing.Point(23, 386);
             this.dataGridViewWork.Name = "dataGridViewWork";
-            this.dataGridViewWork.Size = new System.Drawing.Size(574, 191);
+            this.dataGridViewWork.Size = new System.Drawing.Size(469, 191);
             this.dataGridViewWork.TabIndex = 7;
             // 
             // dataGridViewFact
             // 
+            this.dataGridViewFact.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewFact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFact.Location = new System.Drawing.Point(603, 386);
+            this.dataGridViewFact.Location = new System.Drawing.Point(498, 386);
             this.dataGridViewFact.Name = "dataGridViewFact";
-            this.dataGridViewFact.Size = new System.Drawing.Size(574, 191);
+            this.dataGridViewFact.Size = new System.Drawing.Size(469, 191);
             this.dataGridViewFact.TabIndex = 11;
             // 
             // metroTextBoxSearch
             // 
-            this.metroTextBoxSearch.Location = new System.Drawing.Point(980, 59);
+            this.metroTextBoxSearch.Location = new System.Drawing.Point(770, 63);
             this.metroTextBoxSearch.Name = "metroTextBoxSearch";
             this.metroTextBoxSearch.Size = new System.Drawing.Size(197, 23);
             this.metroTextBoxSearch.TabIndex = 12;
@@ -90,7 +93,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(924, 63);
+            this.metroLabel1.Location = new System.Drawing.Point(714, 67);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(50, 19);
             this.metroLabel1.TabIndex = 13;
@@ -108,7 +111,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(603, 361);
+            this.metroLabel3.Location = new System.Drawing.Point(498, 357);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(67, 19);
             this.metroLabel3.TabIndex = 15;
@@ -148,7 +151,7 @@
             // buttonPosition
             // 
             this.buttonPosition.Image = global::SWA.Properties.Resources.work;
-            this.buttonPosition.Location = new System.Drawing.Point(1146, 27);
+            this.buttonPosition.Location = new System.Drawing.Point(208, 63);
             this.buttonPosition.Name = "buttonPosition";
             this.buttonPosition.Size = new System.Drawing.Size(31, 26);
             this.buttonPosition.TabIndex = 16;
@@ -158,7 +161,7 @@
             // buttonFactDelete
             // 
             this.buttonFactDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonFactDelete.Location = new System.Drawing.Point(1146, 357);
+            this.buttonFactDelete.Location = new System.Drawing.Point(936, 354);
             this.buttonFactDelete.Name = "buttonFactDelete";
             this.buttonFactDelete.Size = new System.Drawing.Size(31, 26);
             this.buttonFactDelete.TabIndex = 10;
@@ -168,7 +171,7 @@
             // buttonFactEdit
             // 
             this.buttonFactEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonFactEdit.Location = new System.Drawing.Point(1109, 357);
+            this.buttonFactEdit.Location = new System.Drawing.Point(899, 354);
             this.buttonFactEdit.Name = "buttonFactEdit";
             this.buttonFactEdit.Size = new System.Drawing.Size(31, 26);
             this.buttonFactEdit.TabIndex = 9;
@@ -178,7 +181,7 @@
             // buttonFactAdd
             // 
             this.buttonFactAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonFactAdd.Location = new System.Drawing.Point(1072, 357);
+            this.buttonFactAdd.Location = new System.Drawing.Point(862, 354);
             this.buttonFactAdd.Name = "buttonFactAdd";
             this.buttonFactAdd.Size = new System.Drawing.Size(31, 26);
             this.buttonFactAdd.TabIndex = 8;
@@ -188,7 +191,7 @@
             // buttonWorkDelete
             // 
             this.buttonWorkDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonWorkDelete.Location = new System.Drawing.Point(566, 357);
+            this.buttonWorkDelete.Location = new System.Drawing.Point(461, 354);
             this.buttonWorkDelete.Name = "buttonWorkDelete";
             this.buttonWorkDelete.Size = new System.Drawing.Size(31, 26);
             this.buttonWorkDelete.TabIndex = 6;
@@ -198,7 +201,7 @@
             // buttonWorkEdit
             // 
             this.buttonWorkEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonWorkEdit.Location = new System.Drawing.Point(529, 357);
+            this.buttonWorkEdit.Location = new System.Drawing.Point(424, 354);
             this.buttonWorkEdit.Name = "buttonWorkEdit";
             this.buttonWorkEdit.Size = new System.Drawing.Size(31, 26);
             this.buttonWorkEdit.TabIndex = 5;
@@ -208,7 +211,7 @@
             // buttonWorkAdd
             // 
             this.buttonWorkAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonWorkAdd.Location = new System.Drawing.Point(492, 357);
+            this.buttonWorkAdd.Location = new System.Drawing.Point(387, 354);
             this.buttonWorkAdd.Name = "buttonWorkAdd";
             this.buttonWorkAdd.Size = new System.Drawing.Size(31, 26);
             this.buttonWorkAdd.TabIndex = 4;
@@ -249,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.ClientSize = new System.Drawing.Size(988, 600);
             this.Controls.Add(this.buttonReloadFilter);
             this.Controls.Add(this.buttonStaffFilter);
             this.Controls.Add(this.buttonDocuments);
@@ -270,6 +273,9 @@
             this.Controls.Add(this.buttonStaffDelete);
             this.Controls.Add(this.buttonStaffEdit);
             this.Controls.Add(this.buttonStaffAdd);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(988, 600);
+            this.MinimumSize = new System.Drawing.Size(988, 600);
             this.Name = "StaffForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Сотрудники";
