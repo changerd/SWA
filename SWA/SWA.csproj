@@ -139,6 +139,12 @@
     <Compile Include="StaffEntityForm.Designer.cs">
       <DependentUpon>StaffEntityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffFilterForm.Designer.cs">
+      <DependentUpon>StaffFilterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     </Compile>
     <Compile Include="StudentEntityForm.Designer.cs">
       <DependentUpon>StudentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentFilterForm.Designer.cs">
+      <DependentUpon>StudentFilterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentForm.cs">
       <SubType>Form</SubType>
@@ -240,6 +252,9 @@
     <EmbeddedResource Include="StaffEntityForm.resx">
       <DependentUpon>StaffEntityForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffFilterForm.resx">
+      <DependentUpon>StaffFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +289,9 @@
     <EmbeddedResource Include="StudentEntityForm.resx">
       <DependentUpon>StudentEntityForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentFilterForm.resx">
+      <DependentUpon>StudentFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +322,7 @@
     <None Include="Icons\filter.png" />
     <None Include="Icons\work.png" />
     <None Include="Icons\portable-document-format.png" />
+    <None Include="Icons\close.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

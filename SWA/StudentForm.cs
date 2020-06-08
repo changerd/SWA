@@ -88,7 +88,7 @@ namespace SWA
                 sSFC
             });
             int i = 0;
-            foreach(var item in query)
+            foreach (var item in query)
             {
                 DataRow newRow = sTable.NewRow();
                 newRow[0] = item.SpecialtyId;
@@ -120,7 +120,7 @@ namespace SWA
                 gSpecialty
             });
             int i = 0;
-            foreach(var item in query)
+            foreach (var item in query)
             {
                 DataRow newRow = gTable.NewRow();
                 newRow[0] = item.GroupId;
@@ -180,7 +180,7 @@ namespace SWA
                 newRow[7] = item.StudentAdress;
                 newRow[8] = item.StudentTelephone;
                 newRow[9] = (item.AdmissionDate.HasValue) ? Convert.ToDateTime(item.AdmissionDate.Value).ToShortDateString() : "-";
-                newRow[10] = (item.GetOutDate.HasValue) ? Convert.ToDateTime(item.GetOutDate.Value).ToShortDateString()  : "-";
+                newRow[10] = (item.GetOutDate.HasValue) ? Convert.ToDateTime(item.GetOutDate.Value).ToShortDateString() : "-";
                 newRow[11] = (item.GraduationDate.HasValue) ? Convert.ToDateTime(item.GraduationDate.Value).ToShortDateString() : "-";
                 sTable.Rows.Add(newRow);
                 i++;
@@ -236,7 +236,7 @@ namespace SWA
                         var sf = await context.StudyForms.FindAsync(Int32.Parse(sSFId));
                         context.Entry(sf).State = EntityState.Deleted;
                         await context.SaveChangesAsync();
-                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     metroTabControl1_SelectedIndexChanged(sender, e);
                 }
@@ -294,7 +294,7 @@ namespace SWA
                         var specialty = await context.Specialties.FindAsync(sId);
                         context.Entry(specialty).State = EntityState.Deleted;
                         await context.SaveChangesAsync();
-                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     metroTabControl1_SelectedIndexChanged(sender, e);
                 }
@@ -352,7 +352,7 @@ namespace SWA
                         var group = await context.Groups.FindAsync(Int32.Parse(gId));
                         context.Entry(group).State = EntityState.Deleted;
                         await context.SaveChangesAsync();
-                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
+                        MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     metroTabControl1_SelectedIndexChanged(sender, e);
                 }
@@ -411,7 +411,7 @@ namespace SWA
                         var student = await context.Students.FindAsync(sId);
                         var group = await context.Groups.FirstOrDefaultAsync(g => g.GroupName == gname);
                         context.Entry(student).State = EntityState.Deleted;
-                        await context.SaveChangesAsync();                       
+                        await context.SaveChangesAsync();
                         group.GroupCount = context.Groups.FirstOrDefault(g => g.GroupName == gname).Students.Count;
                         await context.SaveChangesAsync();
                         MessageBox.Show("Удаление успешно завершено", "SWA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -447,8 +447,78 @@ namespace SWA
 
         private void buttonStudentDocuments_Click(object sender, EventArgs e)
         {
-            var Form = new StudentDocumentsForm();            
+            var Form = new StudentDocumentsForm();
             Form.Show();
+        }
+
+        public void filter()
+        {
+            buttonStudentFilter.Visible = false;
+            buttonReloadFilter.Visible = true;
+        }
+
+        private async void buttonReloadFilter_Click(object sender, EventArgs e)
+        {
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
+                StudentsTable(await context.Students.Include(g => g.Group).ToListAsync());
+            }
+            buttonStudentFilter.Visible = true;
+            buttonReloadFilter.Visible = false;
+            
+        }
+
+        private void buttonStudentFilter_Click(object sender, EventArgs e)
+        {
+            var Form = new StudentFilterForm();
+            Form.sf = this;
+            Form.Show();
+        }
+
+        private void metroTextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewStudent.BindingContext[dataGridViewStudent.DataSource, dataGridViewStudent.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewStudent.RowCount; i++)
+                {
+                    dataGridViewStudent.Rows[i].Selected = false;
+                }
+                if (metroTextBoxSearch.Text == "")
+                    for (int i = 0; i < dataGridViewStudent.RowCount; i++)
+                    {
+                        dataGridViewStudent.Rows[i].Selected = false;
+                        dataGridViewStudent.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewStudent.RowCount; i++)
+                    {
+                        dataGridViewStudent.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewStudent.ColumnCount; j++)
+                            if (dataGridViewStudent.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewStudent.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxSearch.Text))
+                                {
+                                    dataGridViewStudent.Rows[i].Selected = true;
+                                    dataGridViewStudent.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewStudent.Rows[i].Selected = false;
+                                    dataGridViewStudent.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
+            }
         }
     }
 }

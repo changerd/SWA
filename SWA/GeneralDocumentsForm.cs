@@ -14,7 +14,8 @@ using System.Windows.Forms;
 namespace SWA
 {
     public partial class GeneralDocumentsForm : MetroForm
-    {        
+    {
+        DateTime? Date = null;
         public GeneralDocumentsForm()
         {
             InitializeComponent();
@@ -61,7 +62,12 @@ namespace SWA
                 using(ApplicationDbContext context = new ApplicationDbContext())
                 {
                     var documents = context.GeneralDocuments.Include(d => d.DocumentType);
-                    
+
+                    if (Date != null)
+                    {
+                        documents = documents.Where(d => d.GeneralDocumentDateCreation == Date);
+
+                    }
 
                     if (metroTabControl1.SelectedIndex == 0)
                     {
@@ -301,6 +307,158 @@ namespace SWA
             catch (Exception gg)
             {
                 MessageBox.Show(gg.Message, "SWA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dateTimePickerDateFilter_ValueChanged(object sender, EventArgs e)
+        {
+            Date = dateTimePickerDateFilter.Value;
+            metroTabControl1_SelectedIndexChanged(sender, e);
+            buttonReload.Visible = true;
+        }
+
+        private void buttonReload_Click(object sender, EventArgs e)
+        {
+            Date = null;
+            metroTabControl1_SelectedIndexChanged(sender, e);
+            buttonReload.Visible = false;
+        }
+
+        private void metroTextBoxSearchInput_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewInput.BindingContext[dataGridViewInput.DataSource, dataGridViewInput.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewInput.RowCount; i++)
+                {
+                    dataGridViewInput.Rows[i].Selected = false;
+                }
+                if (metroTextBoxSearchInput.Text == "")
+                    for (int i = 0; i < dataGridViewInput.RowCount; i++)
+                    {
+                        dataGridViewInput.Rows[i].Selected = false;
+                        dataGridViewInput.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewInput.RowCount; i++)
+                    {
+                        dataGridViewInput.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewInput.ColumnCount; j++)
+                            if (dataGridViewInput.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewInput.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxSearchInput.Text))
+                                {
+                                    dataGridViewInput.Rows[i].Selected = true;
+                                    dataGridViewInput.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewInput.Rows[i].Selected = false;
+                                    dataGridViewInput.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
+            }
+        }
+
+        private void metroTextBoxSearchOutput_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewOutput.BindingContext[dataGridViewOutput.DataSource, dataGridViewOutput.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewOutput.RowCount; i++)
+                {
+                    dataGridViewOutput.Rows[i].Selected = false;
+                }
+                if (metroTextBoxSearchOutput.Text == "")
+                    for (int i = 0; i < dataGridViewOutput.RowCount; i++)
+                    {
+                        dataGridViewOutput.Rows[i].Selected = false;
+                        dataGridViewOutput.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewOutput.RowCount; i++)
+                    {
+                        dataGridViewOutput.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewOutput.ColumnCount; j++)
+                            if (dataGridViewOutput.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewOutput.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxSearchOutput.Text))
+                                {
+                                    dataGridViewOutput.Rows[i].Selected = true;
+                                    dataGridViewOutput.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewOutput.Rows[i].Selected = false;
+                                    dataGridViewOutput.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
+            }
+        }
+
+        private void metroTextBoxSearchInside_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewInside.BindingContext[dataGridViewInside.DataSource, dataGridViewInside.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewInside.RowCount; i++)
+                {
+                    dataGridViewInside.Rows[i].Selected = false;
+                }
+                if (metroTextBoxSearchInput.Text == "")
+                    for (int i = 0; i < dataGridViewInside.RowCount; i++)
+                    {
+                        dataGridViewInside.Rows[i].Selected = false;
+                        dataGridViewInside.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewInside.RowCount; i++)
+                    {
+                        dataGridViewInside.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewInside.ColumnCount; j++)
+                            if (dataGridViewInside.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewInside.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxSearchInput.Text))
+                                {
+                                    dataGridViewInside.Rows[i].Selected = true;
+                                    dataGridViewInside.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewInside.Rows[i].Selected = false;
+                                    dataGridViewInside.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
             }
         }
     }

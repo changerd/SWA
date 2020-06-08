@@ -343,5 +343,75 @@ namespace SWA
             var Form = new StaffDocumentsForm();
             Form.Show();
         }
+
+        public void filter()
+        {
+            buttonStaffFilter.Visible = false;
+            buttonReloadFilter.Visible = true;
+        }
+
+        private async void buttonReloadFilter_Click(object sender, EventArgs e)
+        {
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
+                StaffTable(await context.Staffs.Include(s => s.Position).ToListAsync());
+            }
+            buttonStaffFilter.Visible = true;
+            buttonReloadFilter.Visible = false;
+
+        }
+
+        private void buttonStaffFilter_Click(object sender, EventArgs e)
+        {
+            var Form = new StaffFilterForm();
+            Form.sf = this;
+            Form.Show();
+        }
+
+        private void metroTextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewStaff.BindingContext[dataGridViewStaff.DataSource, dataGridViewStaff.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewStaff.RowCount; i++)
+                {
+                    dataGridViewStaff.Rows[i].Selected = false;
+                }
+                if (metroTextBoxSearch.Text == "")
+                    for (int i = 0; i < dataGridViewStaff.RowCount; i++)
+                    {
+                        dataGridViewStaff.Rows[i].Selected = false;
+                        dataGridViewStaff.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewStaff.RowCount; i++)
+                    {
+                        dataGridViewStaff.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewStaff.ColumnCount; j++)
+                            if (dataGridViewStaff.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewStaff.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxSearch.Text))
+                                {
+                                    dataGridViewStaff.Rows[i].Selected = true;
+                                    dataGridViewStaff.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewStaff.Rows[i].Selected = false;
+                                    dataGridViewStaff.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
+            }
+        }
     }
 }

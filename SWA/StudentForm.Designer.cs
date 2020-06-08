@@ -30,6 +30,14 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageStudents = new MetroFramework.Controls.MetroTabPage();
+            this.buttonReloadFilter = new System.Windows.Forms.Button();
+            this.buttonStudentDocuments = new System.Windows.Forms.Button();
+            this.metroTextBoxSearch = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.buttonStudentDelete = new System.Windows.Forms.Button();
+            this.buttonStudentFilter = new System.Windows.Forms.Button();
+            this.buttonStudentEdit = new System.Windows.Forms.Button();
+            this.buttonStudentAdd = new System.Windows.Forms.Button();
             this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.metroTabPageService = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -38,13 +46,6 @@
             this.dataGridViewGroup = new System.Windows.Forms.DataGridView();
             this.dataGridViewSpecialty = new System.Windows.Forms.DataGridView();
             this.dataGridViewStudyForm = new System.Windows.Forms.DataGridView();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxSearch = new MetroFramework.Controls.MetroTextBox();
-            this.buttonStudentDocuments = new System.Windows.Forms.Button();
-            this.buttonStudentDelete = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.buttonStudentEdit = new System.Windows.Forms.Button();
-            this.buttonStudentAdd = new System.Windows.Forms.Button();
             this.buttonGroupDelete = new System.Windows.Forms.Button();
             this.buttonGroupEdit = new System.Windows.Forms.Button();
             this.buttonGroupAdd = new System.Windows.Forms.Button();
@@ -77,11 +78,12 @@
             // 
             // metroTabPageStudents
             // 
+            this.metroTabPageStudents.Controls.Add(this.buttonReloadFilter);
             this.metroTabPageStudents.Controls.Add(this.buttonStudentDocuments);
             this.metroTabPageStudents.Controls.Add(this.metroTextBoxSearch);
             this.metroTabPageStudents.Controls.Add(this.metroLabel4);
             this.metroTabPageStudents.Controls.Add(this.buttonStudentDelete);
-            this.metroTabPageStudents.Controls.Add(this.button4);
+            this.metroTabPageStudents.Controls.Add(this.buttonStudentFilter);
             this.metroTabPageStudents.Controls.Add(this.buttonStudentEdit);
             this.metroTabPageStudents.Controls.Add(this.buttonStudentAdd);
             this.metroTabPageStudents.Controls.Add(this.dataGridViewStudent);
@@ -92,6 +94,84 @@
             this.metroTabPageStudents.TabIndex = 0;
             this.metroTabPageStudents.Text = "Студенты";
             this.metroTabPageStudents.VerticalScrollbarBarColor = true;
+            // 
+            // buttonReloadFilter
+            // 
+            this.buttonReloadFilter.Image = global::SWA.Properties.Resources.close;
+            this.buttonReloadFilter.Location = new System.Drawing.Point(114, 3);
+            this.buttonReloadFilter.Name = "buttonReloadFilter";
+            this.buttonReloadFilter.Size = new System.Drawing.Size(31, 26);
+            this.buttonReloadFilter.TabIndex = 10;
+            this.buttonReloadFilter.UseVisualStyleBackColor = true;
+            this.buttonReloadFilter.Visible = false;
+            this.buttonReloadFilter.Click += new System.EventHandler(this.buttonReloadFilter_Click);
+            // 
+            // buttonStudentDocuments
+            // 
+            this.buttonStudentDocuments.Image = global::SWA.Properties.Resources.portable_document_format;
+            this.buttonStudentDocuments.Location = new System.Drawing.Point(151, 3);
+            this.buttonStudentDocuments.Name = "buttonStudentDocuments";
+            this.buttonStudentDocuments.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentDocuments.TabIndex = 9;
+            this.buttonStudentDocuments.UseVisualStyleBackColor = true;
+            this.buttonStudentDocuments.Click += new System.EventHandler(this.buttonStudentDocuments_Click);
+            // 
+            // metroTextBoxSearch
+            // 
+            this.metroTextBoxSearch.Location = new System.Drawing.Point(965, 6);
+            this.metroTextBoxSearch.Name = "metroTextBoxSearch";
+            this.metroTextBoxSearch.Size = new System.Drawing.Size(178, 23);
+            this.metroTextBoxSearch.TabIndex = 8;
+            this.metroTextBoxSearch.TextChanged += new System.EventHandler(this.metroTextBoxSearch_TextChanged);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(909, 10);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel4.TabIndex = 7;
+            this.metroLabel4.Text = "Поиск:";
+            // 
+            // buttonStudentDelete
+            // 
+            this.buttonStudentDelete.Image = global::SWA.Properties.Resources.garbage_container;
+            this.buttonStudentDelete.Location = new System.Drawing.Point(77, 3);
+            this.buttonStudentDelete.Name = "buttonStudentDelete";
+            this.buttonStudentDelete.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentDelete.TabIndex = 5;
+            this.buttonStudentDelete.UseVisualStyleBackColor = true;
+            this.buttonStudentDelete.Click += new System.EventHandler(this.buttonStudentDelete_Click);
+            // 
+            // buttonStudentFilter
+            // 
+            this.buttonStudentFilter.Image = global::SWA.Properties.Resources.filter;
+            this.buttonStudentFilter.Location = new System.Drawing.Point(114, 3);
+            this.buttonStudentFilter.Name = "buttonStudentFilter";
+            this.buttonStudentFilter.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentFilter.TabIndex = 6;
+            this.buttonStudentFilter.UseVisualStyleBackColor = true;
+            this.buttonStudentFilter.Click += new System.EventHandler(this.buttonStudentFilter_Click);
+            // 
+            // buttonStudentEdit
+            // 
+            this.buttonStudentEdit.Image = global::SWA.Properties.Resources.edit;
+            this.buttonStudentEdit.Location = new System.Drawing.Point(40, 3);
+            this.buttonStudentEdit.Name = "buttonStudentEdit";
+            this.buttonStudentEdit.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentEdit.TabIndex = 4;
+            this.buttonStudentEdit.UseVisualStyleBackColor = true;
+            this.buttonStudentEdit.Click += new System.EventHandler(this.buttonStudentEdit_Click);
+            // 
+            // buttonStudentAdd
+            // 
+            this.buttonStudentAdd.Image = global::SWA.Properties.Resources.plus_sign;
+            this.buttonStudentAdd.Location = new System.Drawing.Point(3, 3);
+            this.buttonStudentAdd.Name = "buttonStudentAdd";
+            this.buttonStudentAdd.Size = new System.Drawing.Size(31, 26);
+            this.buttonStudentAdd.TabIndex = 3;
+            this.buttonStudentAdd.UseVisualStyleBackColor = true;
+            this.buttonStudentAdd.Click += new System.EventHandler(this.buttonStudentAdd_Click);
             // 
             // dataGridViewStudent
             // 
@@ -180,71 +260,6 @@
             this.dataGridViewStudyForm.Name = "dataGridViewStudyForm";
             this.dataGridViewStudyForm.Size = new System.Drawing.Size(376, 437);
             this.dataGridViewStudyForm.TabIndex = 5;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(909, 10);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel4.TabIndex = 7;
-            this.metroLabel4.Text = "Поиск:";
-            // 
-            // metroTextBoxSearch
-            // 
-            this.metroTextBoxSearch.Location = new System.Drawing.Point(965, 6);
-            this.metroTextBoxSearch.Name = "metroTextBoxSearch";
-            this.metroTextBoxSearch.Size = new System.Drawing.Size(178, 23);
-            this.metroTextBoxSearch.TabIndex = 8;
-            // 
-            // buttonStudentDocuments
-            // 
-            this.buttonStudentDocuments.Image = global::SWA.Properties.Resources.portable_document_format;
-            this.buttonStudentDocuments.Location = new System.Drawing.Point(151, 3);
-            this.buttonStudentDocuments.Name = "buttonStudentDocuments";
-            this.buttonStudentDocuments.Size = new System.Drawing.Size(31, 26);
-            this.buttonStudentDocuments.TabIndex = 9;
-            this.buttonStudentDocuments.UseVisualStyleBackColor = true;
-            this.buttonStudentDocuments.Click += new System.EventHandler(this.buttonStudentDocuments_Click);
-            // 
-            // buttonStudentDelete
-            // 
-            this.buttonStudentDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonStudentDelete.Location = new System.Drawing.Point(77, 3);
-            this.buttonStudentDelete.Name = "buttonStudentDelete";
-            this.buttonStudentDelete.Size = new System.Drawing.Size(31, 26);
-            this.buttonStudentDelete.TabIndex = 5;
-            this.buttonStudentDelete.UseVisualStyleBackColor = true;
-            this.buttonStudentDelete.Click += new System.EventHandler(this.buttonStudentDelete_Click);
-            // 
-            // button4
-            // 
-            this.button4.Image = global::SWA.Properties.Resources.filter;
-            this.button4.Location = new System.Drawing.Point(114, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 26);
-            this.button4.TabIndex = 6;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // buttonStudentEdit
-            // 
-            this.buttonStudentEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonStudentEdit.Location = new System.Drawing.Point(40, 3);
-            this.buttonStudentEdit.Name = "buttonStudentEdit";
-            this.buttonStudentEdit.Size = new System.Drawing.Size(31, 26);
-            this.buttonStudentEdit.TabIndex = 4;
-            this.buttonStudentEdit.UseVisualStyleBackColor = true;
-            this.buttonStudentEdit.Click += new System.EventHandler(this.buttonStudentEdit_Click);
-            // 
-            // buttonStudentAdd
-            // 
-            this.buttonStudentAdd.Image = global::SWA.Properties.Resources.plus_sign;
-            this.buttonStudentAdd.Location = new System.Drawing.Point(3, 3);
-            this.buttonStudentAdd.Name = "buttonStudentAdd";
-            this.buttonStudentAdd.Size = new System.Drawing.Size(31, 26);
-            this.buttonStudentAdd.TabIndex = 3;
-            this.buttonStudentAdd.UseVisualStyleBackColor = true;
-            this.buttonStudentAdd.Click += new System.EventHandler(this.buttonStudentAdd_Click);
             // 
             // buttonGroupDelete
             // 
@@ -366,7 +381,7 @@
         private System.Windows.Forms.DataGridView dataGridViewStudent;
         private MetroFramework.Controls.MetroTabPage metroTabPageService;
         private System.Windows.Forms.Button buttonStudentAdd;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonStudentFilter;
         private System.Windows.Forms.Button buttonStudentDelete;
         private System.Windows.Forms.Button buttonStudentEdit;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -387,5 +402,6 @@
         private MetroFramework.Controls.MetroTextBox metroTextBoxSearch;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.Button buttonStudentDocuments;
+        private System.Windows.Forms.Button buttonReloadFilter;
     }
 }

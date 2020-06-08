@@ -35,6 +35,9 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.buttonReloadFilter = new System.Windows.Forms.Button();
+            this.buttonStaffFilter = new System.Windows.Forms.Button();
+            this.buttonDocuments = new System.Windows.Forms.Button();
             this.buttonPosition = new System.Windows.Forms.Button();
             this.buttonFactDelete = new System.Windows.Forms.Button();
             this.buttonFactEdit = new System.Windows.Forms.Button();
@@ -45,7 +48,6 @@
             this.buttonStaffDelete = new System.Windows.Forms.Button();
             this.buttonStaffEdit = new System.Windows.Forms.Button();
             this.buttonStaffAdd = new System.Windows.Forms.Button();
-            this.buttonDocuments = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFact)).BeginInit();
@@ -83,6 +85,7 @@
             this.metroTextBoxSearch.Name = "metroTextBoxSearch";
             this.metroTextBoxSearch.Size = new System.Drawing.Size(197, 23);
             this.metroTextBoxSearch.TabIndex = 12;
+            this.metroTextBoxSearch.TextChanged += new System.EventHandler(this.metroTextBoxSearch_TextChanged);
             // 
             // metroLabel1
             // 
@@ -110,6 +113,37 @@
             this.metroLabel3.Size = new System.Drawing.Size(67, 19);
             this.metroLabel3.TabIndex = 15;
             this.metroLabel3.Text = "Сведенья";
+            // 
+            // buttonReloadFilter
+            // 
+            this.buttonReloadFilter.Image = global::SWA.Properties.Resources.close;
+            this.buttonReloadFilter.Location = new System.Drawing.Point(134, 63);
+            this.buttonReloadFilter.Name = "buttonReloadFilter";
+            this.buttonReloadFilter.Size = new System.Drawing.Size(31, 26);
+            this.buttonReloadFilter.TabIndex = 19;
+            this.buttonReloadFilter.UseVisualStyleBackColor = true;
+            this.buttonReloadFilter.Visible = false;
+            this.buttonReloadFilter.Click += new System.EventHandler(this.buttonReloadFilter_Click);
+            // 
+            // buttonStaffFilter
+            // 
+            this.buttonStaffFilter.Image = global::SWA.Properties.Resources.filter;
+            this.buttonStaffFilter.Location = new System.Drawing.Point(134, 63);
+            this.buttonStaffFilter.Name = "buttonStaffFilter";
+            this.buttonStaffFilter.Size = new System.Drawing.Size(31, 26);
+            this.buttonStaffFilter.TabIndex = 18;
+            this.buttonStaffFilter.UseVisualStyleBackColor = true;
+            this.buttonStaffFilter.Click += new System.EventHandler(this.buttonStaffFilter_Click);
+            // 
+            // buttonDocuments
+            // 
+            this.buttonDocuments.Image = global::SWA.Properties.Resources.portable_document_format;
+            this.buttonDocuments.Location = new System.Drawing.Point(171, 63);
+            this.buttonDocuments.Name = "buttonDocuments";
+            this.buttonDocuments.Size = new System.Drawing.Size(31, 26);
+            this.buttonDocuments.TabIndex = 17;
+            this.buttonDocuments.UseVisualStyleBackColor = true;
+            this.buttonDocuments.Click += new System.EventHandler(this.buttonDocuments_Click);
             // 
             // buttonPosition
             // 
@@ -211,21 +245,13 @@
             this.buttonStaffAdd.UseVisualStyleBackColor = true;
             this.buttonStaffAdd.Click += new System.EventHandler(this.buttonStaffAdd_Click);
             // 
-            // buttonDocuments
-            // 
-            this.buttonDocuments.Image = global::SWA.Properties.Resources.portable_document_format;
-            this.buttonDocuments.Location = new System.Drawing.Point(134, 63);
-            this.buttonDocuments.Name = "buttonDocuments";
-            this.buttonDocuments.Size = new System.Drawing.Size(31, 26);
-            this.buttonDocuments.TabIndex = 17;
-            this.buttonDocuments.UseVisualStyleBackColor = true;
-            this.buttonDocuments.Click += new System.EventHandler(this.buttonDocuments_Click);
-            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.Controls.Add(this.buttonReloadFilter);
+            this.Controls.Add(this.buttonStaffFilter);
             this.Controls.Add(this.buttonDocuments);
             this.Controls.Add(this.buttonPosition);
             this.Controls.Add(this.metroLabel3);
@@ -276,5 +302,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.Button buttonPosition;
         private System.Windows.Forms.Button buttonDocuments;
+        private System.Windows.Forms.Button buttonReloadFilter;
+        private System.Windows.Forms.Button buttonStaffFilter;
     }
 }

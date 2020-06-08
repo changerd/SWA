@@ -43,6 +43,14 @@
             this.dataGridViewInside = new System.Windows.Forms.DataGridView();
             this.metroTileDocumentAdd = new MetroFramework.Controls.MetroTile();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
+            this.buttonReload = new System.Windows.Forms.Button();
+            this.dateTimePickerDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSearchInput = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBoxSearchOutput = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSearchInside = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).BeginInit();
@@ -59,13 +67,15 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 92);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(1154, 349);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.metroTextBoxSearchInput);
+            this.metroTabPage1.Controls.Add(this.metroLabel1);
             this.metroTabPage1.Controls.Add(this.buttonInputDelete);
             this.metroTabPage1.Controls.Add(this.buttonInputEdit);
             this.metroTabPage1.Controls.Add(this.dataGridViewInput);
@@ -108,6 +118,8 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.metroTextBoxSearchOutput);
+            this.metroTabPage2.Controls.Add(this.metroLabel2);
             this.metroTabPage2.Controls.Add(this.dataGridViewOutput);
             this.metroTabPage2.Controls.Add(this.buttonOutputDelete);
             this.metroTabPage2.Controls.Add(this.buttonOutputEdit);
@@ -150,6 +162,8 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.metroTextBoxSearchInside);
+            this.metroTabPage3.Controls.Add(this.metroLabel3);
             this.metroTabPage3.Controls.Add(this.buttonInsideDelete);
             this.metroTabPage3.Controls.Add(this.buttonInsideEdit);
             this.metroTabPage3.Controls.Add(this.dataGridViewInside);
@@ -208,11 +222,85 @@
             this.richTextBoxDescription.TabIndex = 2;
             this.richTextBoxDescription.Text = "";
             // 
+            // buttonReload
+            // 
+            this.buttonReload.Location = new System.Drawing.Point(277, 63);
+            this.buttonReload.Name = "buttonReload";
+            this.buttonReload.Size = new System.Drawing.Size(75, 23);
+            this.buttonReload.TabIndex = 8;
+            this.buttonReload.Text = "Сбросить";
+            this.buttonReload.UseVisualStyleBackColor = true;
+            this.buttonReload.Visible = false;
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
+            // 
+            // dateTimePickerDateFilter
+            // 
+            this.dateTimePickerDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDateFilter.Location = new System.Drawing.Point(178, 66);
+            this.dateTimePickerDateFilter.Name = "dateTimePickerDateFilter";
+            this.dateTimePickerDateFilter.Size = new System.Drawing.Size(93, 20);
+            this.dateTimePickerDateFilter.TabIndex = 7;
+            this.dateTimePickerDateFilter.Value = new System.DateTime(2020, 6, 8, 0, 0, 0, 0);
+            this.dateTimePickerDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerDateFilter_ValueChanged);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(946, 10);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel1.TabIndex = 8;
+            this.metroLabel1.Text = "Поиск:";
+            // 
+            // metroTextBoxSearchInput
+            // 
+            this.metroTextBoxSearchInput.Location = new System.Drawing.Point(1002, 6);
+            this.metroTextBoxSearchInput.Name = "metroTextBoxSearchInput";
+            this.metroTextBoxSearchInput.Size = new System.Drawing.Size(141, 23);
+            this.metroTextBoxSearchInput.TabIndex = 9;
+            this.metroTextBoxSearchInput.TextChanged += new System.EventHandler(this.metroTextBoxSearchInput_TextChanged);
+            // 
+            // metroTextBoxSearchOutput
+            // 
+            this.metroTextBoxSearchOutput.Location = new System.Drawing.Point(1002, 6);
+            this.metroTextBoxSearchOutput.Name = "metroTextBoxSearchOutput";
+            this.metroTextBoxSearchOutput.Size = new System.Drawing.Size(141, 23);
+            this.metroTextBoxSearchOutput.TabIndex = 13;
+            this.metroTextBoxSearchOutput.TextChanged += new System.EventHandler(this.metroTextBoxSearchOutput_TextChanged);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(946, 10);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "Поиск:";
+            // 
+            // metroTextBoxSearchInside
+            // 
+            this.metroTextBoxSearchInside.Location = new System.Drawing.Point(1002, 6);
+            this.metroTextBoxSearchInside.Name = "metroTextBoxSearchInside";
+            this.metroTextBoxSearchInside.Size = new System.Drawing.Size(141, 23);
+            this.metroTextBoxSearchInside.TabIndex = 13;
+            this.metroTextBoxSearchInside.TextChanged += new System.EventHandler(this.metroTextBoxSearchInside_TextChanged);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(946, 10);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Поиск:";
+            // 
             // GeneralDocumentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.Controls.Add(this.buttonReload);
+            this.Controls.Add(this.dateTimePickerDateFilter);
             this.Controls.Add(this.richTextBoxDescription);
             this.Controls.Add(this.metroTileDocumentAdd);
             this.Controls.Add(this.metroTabControl1);
@@ -221,10 +309,13 @@
             this.Load += new System.EventHandler(this.GeneralDocumentsForm_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutput)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInside)).EndInit();
             this.ResumeLayout(false);
 
@@ -247,5 +338,13 @@
         private System.Windows.Forms.DataGridView dataGridViewInside;
         private MetroFramework.Controls.MetroTile metroTileDocumentAdd;
         private System.Windows.Forms.RichTextBox richTextBoxDescription;
+        private System.Windows.Forms.Button buttonReload;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateFilter;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxSearchInput;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxSearchOutput;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxSearchInside;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }
