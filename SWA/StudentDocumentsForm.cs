@@ -467,5 +467,12 @@ namespace SWA
                 MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
             }
         }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            var Form = new StudentDocumentPrintForm();
+            Form.StudentId = StudentId;
+            Form.Show();
+        }
     }
 }

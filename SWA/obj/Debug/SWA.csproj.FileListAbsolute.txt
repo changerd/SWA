@@ -34,3 +34,7 @@ C:\pr\SWA\SWA\obj\Debug\SWA.GeneralDocumentsEntityForm.resources
 C:\pr\SWA\SWA\obj\Debug\SWA.GeneralDocumentsForm.resources
 C:\pr\SWA\SWA\obj\Debug\SWA.StudentFilterForm.resources
 C:\pr\SWA\SWA\obj\Debug\SWA.StaffFilterForm.resources
+C:\pr\SWA\SWA\obj\Debug\SWA.StudentDocumentPrintForm.resources
+C:\pr\SWA\SWA\obj\Debug\SWA.GeneralDocumentPrintForm.resources
+C:\pr\SWA\SWA\obj\Debug\SWA.StaffDocumentPrintForm.resources
+C:\pr\SWA\SWA\obj\Debug\SWA.StudentPrintForm.resources

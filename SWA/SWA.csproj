@@ -52,6 +52,10 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -133,6 +137,12 @@
     <Compile Include="GeneralDocumentsForm.Designer.cs">
       <DependentUpon>GeneralDocumentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralDocumentPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDocumentPrintForm.Designer.cs">
+      <DependentUpon>GeneralDocumentPrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffEntityForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +180,18 @@
     <Compile Include="StaffDocumentsEntityForm.Designer.cs">
       <DependentUpon>StaffDocumentsEntityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffDocumentPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDocumentPrintForm.Designer.cs">
+      <DependentUpon>StaffDocumentPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDocumentPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDocumentPrintForm.Designer.cs">
+      <DependentUpon>StudentDocumentPrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDocumentsEntityForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +215,12 @@
     </Compile>
     <Compile Include="StudentEntityForm.Designer.cs">
       <DependentUpon>StudentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPrintForm.Designer.cs">
+      <DependentUpon>StudentPrintForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentFilterForm.cs">
       <SubType>Form</SubType>
@@ -234,6 +262,31 @@
     <EmbeddedResource Include="Migrations\202006071454532_DataMigration3.resx">
       <DependentUpon>202006071454532_DataMigration3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\SWA.FactEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.GeneralDocumentsEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.GeneralDocumentsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.GroupEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.Migrations.DataMigration.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.Migrations.DataMigration1.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.Migrations.DataMigration2.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.Migrations.DataMigration3.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.PositionEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.PositionForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.SpecialtyEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StaffDocumentsEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StaffDocumentsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StaffEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StaffFilterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StaffForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StartForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudentDocumentsEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudentDocumentsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudentEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudentFilterForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.StudyFormEntityForm.resources" />
+    <EmbeddedResource Include="obj\Debug\SWA.WorkEntityForm.resources" />
     <EmbeddedResource Include="PositionEntityForm.resx">
       <DependentUpon>PositionEntityForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralDocumentsForm.resx">
       <DependentUpon>GeneralDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDocumentPrintForm.resx">
+      <DependentUpon>GeneralDocumentPrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffEntityForm.resx">
       <DependentUpon>StaffEntityForm.cs</DependentUpon>
@@ -277,6 +333,12 @@
     <EmbeddedResource Include="StaffDocumentsEntityForm.resx">
       <DependentUpon>StaffDocumentsEntityForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffDocumentPrintForm.resx">
+      <DependentUpon>StaffDocumentPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDocumentPrintForm.resx">
+      <DependentUpon>StudentDocumentPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentDocumentsEntityForm.resx">
       <DependentUpon>StudentDocumentsEntityForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentEntityForm.resx">
       <DependentUpon>StudentEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPrintForm.resx">
+      <DependentUpon>StudentPrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentFilterForm.resx">
       <DependentUpon>StudentFilterForm.cs</DependentUpon>
@@ -301,6 +366,14 @@
     <EmbeddedResource Include="WorkEntityForm.resx">
       <DependentUpon>WorkEntityForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\SWA.exe.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SWA.csproj.CopyComplete" />
+    <None Include="obj\Debug\SWA.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\SWA.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\SWA.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -316,6 +389,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\print.png" />
+    <Content Include="obj\Debug\SWA.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SWA.exe" />
+    <Content Include="obj\Debug\SWA.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
     <None Include="Icons\plus-sign.png" />
     <None Include="Icons\edit.png" />
     <None Include="Icons\garbage-container.png" />
@@ -323,7 +401,18 @@
     <None Include="Icons\work.png" />
     <None Include="Icons\portable-document-format.png" />
     <None Include="Icons\close.png" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\SWA.exe" />
+    <Content Include="bin\Debug\SWA.pdb" />
     <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

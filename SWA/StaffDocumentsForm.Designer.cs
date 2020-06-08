@@ -35,29 +35,30 @@
             this.buttonInputDelete = new System.Windows.Forms.Button();
             this.buttonInputEdit = new System.Windows.Forms.Button();
             this.dataGridViewInput = new System.Windows.Forms.DataGridView();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTextBoxSearchInside = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.buttonInsideDelete = new System.Windows.Forms.Button();
-            this.buttonInsideEdit = new System.Windows.Forms.Button();
-            this.dataGridViewInside = new System.Windows.Forms.DataGridView();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTextBoxSearchOutput = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.dataGridViewOutput = new System.Windows.Forms.DataGridView();
             this.buttonOutputDelete = new System.Windows.Forms.Button();
             this.buttonOutputEdit = new System.Windows.Forms.Button();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTextBoxSearchInside = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.buttonInsideDelete = new System.Windows.Forms.Button();
+            this.buttonInsideEdit = new System.Windows.Forms.Button();
+            this.dataGridViewInside = new System.Windows.Forms.DataGridView();
             this.metroTileDocumentAdd = new MetroFramework.Controls.MetroTile();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.buttonReload = new System.Windows.Forms.Button();
             this.dateTimePickerDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).BeginInit();
-            this.metroTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInside)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutput)).BeginInit();
+            this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInside)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -133,67 +134,6 @@
             this.dataGridViewInput.TabIndex = 5;
             this.dataGridViewInput.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInput_CellClick);
             // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.Controls.Add(this.metroTextBoxSearchInside);
-            this.metroTabPage3.Controls.Add(this.metroLabel3);
-            this.metroTabPage3.Controls.Add(this.buttonInsideDelete);
-            this.metroTabPage3.Controls.Add(this.buttonInsideEdit);
-            this.metroTabPage3.Controls.Add(this.dataGridViewInside);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(1146, 310);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Внутренние";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroTextBoxSearchInside
-            // 
-            this.metroTextBoxSearchInside.Location = new System.Drawing.Point(999, 6);
-            this.metroTextBoxSearchInside.Name = "metroTextBoxSearchInside";
-            this.metroTextBoxSearchInside.Size = new System.Drawing.Size(144, 23);
-            this.metroTextBoxSearchInside.TabIndex = 13;
-            this.metroTextBoxSearchInside.TextChanged += new System.EventHandler(this.metroTextBoxSearchInside_TextChanged);
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(943, 10);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel3.TabIndex = 12;
-            this.metroLabel3.Text = "Поиск:";
-            // 
-            // buttonInsideDelete
-            // 
-            this.buttonInsideDelete.Image = global::SWA.Properties.Resources.garbage_container;
-            this.buttonInsideDelete.Location = new System.Drawing.Point(40, 3);
-            this.buttonInsideDelete.Name = "buttonInsideDelete";
-            this.buttonInsideDelete.Size = new System.Drawing.Size(31, 26);
-            this.buttonInsideDelete.TabIndex = 11;
-            this.buttonInsideDelete.UseVisualStyleBackColor = true;
-            this.buttonInsideDelete.Click += new System.EventHandler(this.buttonInsideDelete_Click);
-            // 
-            // buttonInsideEdit
-            // 
-            this.buttonInsideEdit.Image = global::SWA.Properties.Resources.edit;
-            this.buttonInsideEdit.Location = new System.Drawing.Point(3, 3);
-            this.buttonInsideEdit.Name = "buttonInsideEdit";
-            this.buttonInsideEdit.Size = new System.Drawing.Size(31, 26);
-            this.buttonInsideEdit.TabIndex = 10;
-            this.buttonInsideEdit.UseVisualStyleBackColor = true;
-            this.buttonInsideEdit.Click += new System.EventHandler(this.buttonInsideEdit_Click);
-            // 
-            // dataGridViewInside
-            // 
-            this.dataGridViewInside.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInside.Location = new System.Drawing.Point(3, 35);
-            this.dataGridViewInside.Name = "dataGridViewInside";
-            this.dataGridViewInside.Size = new System.Drawing.Size(1140, 272);
-            this.dataGridViewInside.TabIndex = 9;
-            this.dataGridViewInside.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInside_CellClick);
-            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.metroTextBoxSearchOutput);
@@ -255,6 +195,67 @@
             this.buttonOutputEdit.UseVisualStyleBackColor = true;
             this.buttonOutputEdit.Click += new System.EventHandler(this.buttonOutputEdit_Click);
             // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.metroTextBoxSearchInside);
+            this.metroTabPage3.Controls.Add(this.metroLabel3);
+            this.metroTabPage3.Controls.Add(this.buttonInsideDelete);
+            this.metroTabPage3.Controls.Add(this.buttonInsideEdit);
+            this.metroTabPage3.Controls.Add(this.dataGridViewInside);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(1146, 310);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Внутренние";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // metroTextBoxSearchInside
+            // 
+            this.metroTextBoxSearchInside.Location = new System.Drawing.Point(999, 6);
+            this.metroTextBoxSearchInside.Name = "metroTextBoxSearchInside";
+            this.metroTextBoxSearchInside.Size = new System.Drawing.Size(144, 23);
+            this.metroTextBoxSearchInside.TabIndex = 13;
+            this.metroTextBoxSearchInside.TextChanged += new System.EventHandler(this.metroTextBoxSearchInside_TextChanged);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(943, 10);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Поиск:";
+            // 
+            // buttonInsideDelete
+            // 
+            this.buttonInsideDelete.Image = global::SWA.Properties.Resources.garbage_container;
+            this.buttonInsideDelete.Location = new System.Drawing.Point(40, 3);
+            this.buttonInsideDelete.Name = "buttonInsideDelete";
+            this.buttonInsideDelete.Size = new System.Drawing.Size(31, 26);
+            this.buttonInsideDelete.TabIndex = 11;
+            this.buttonInsideDelete.UseVisualStyleBackColor = true;
+            this.buttonInsideDelete.Click += new System.EventHandler(this.buttonInsideDelete_Click);
+            // 
+            // buttonInsideEdit
+            // 
+            this.buttonInsideEdit.Image = global::SWA.Properties.Resources.edit;
+            this.buttonInsideEdit.Location = new System.Drawing.Point(3, 3);
+            this.buttonInsideEdit.Name = "buttonInsideEdit";
+            this.buttonInsideEdit.Size = new System.Drawing.Size(31, 26);
+            this.buttonInsideEdit.TabIndex = 10;
+            this.buttonInsideEdit.UseVisualStyleBackColor = true;
+            this.buttonInsideEdit.Click += new System.EventHandler(this.buttonInsideEdit_Click);
+            // 
+            // dataGridViewInside
+            // 
+            this.dataGridViewInside.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInside.Location = new System.Drawing.Point(3, 35);
+            this.dataGridViewInside.Name = "dataGridViewInside";
+            this.dataGridViewInside.Size = new System.Drawing.Size(1140, 272);
+            this.dataGridViewInside.TabIndex = 9;
+            this.dataGridViewInside.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInside_CellClick);
+            // 
             // metroTileDocumentAdd
             // 
             this.metroTileDocumentAdd.Enabled = false;
@@ -295,11 +296,22 @@
             this.dateTimePickerDateFilter.Value = new System.DateTime(2020, 6, 8, 0, 0, 0, 0);
             this.dateTimePickerDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerDateFilter_ValueChanged);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Image = global::SWA.Properties.Resources.print;
+            this.buttonPrint.Location = new System.Drawing.Point(1139, 60);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(31, 26);
+            this.buttonPrint.TabIndex = 7;
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // StaffDocumentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonReload);
             this.Controls.Add(this.dateTimePickerDateFilter);
             this.Controls.Add(this.richTextBoxDescription);
@@ -312,12 +324,12 @@
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).EndInit();
-            this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInside)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOutput)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInside)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +359,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox metroTextBoxSearchInside;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

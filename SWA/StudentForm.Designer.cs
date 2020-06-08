@@ -55,6 +55,7 @@
             this.buttonStudyFormDelete = new System.Windows.Forms.Button();
             this.buttonStudyFormEdit = new System.Windows.Forms.Button();
             this.buttonStudyFormAdd = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPageStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
@@ -78,6 +79,7 @@
             // 
             // metroTabPageStudents
             // 
+            this.metroTabPageStudents.Controls.Add(this.buttonPrint);
             this.metroTabPageStudents.Controls.Add(this.buttonReloadFilter);
             this.metroTabPageStudents.Controls.Add(this.buttonStudentDocuments);
             this.metroTabPageStudents.Controls.Add(this.metroTextBoxSearch);
@@ -351,6 +353,16 @@
             this.buttonStudyFormAdd.UseVisualStyleBackColor = true;
             this.buttonStudyFormAdd.Click += new System.EventHandler(this.buttonStudyFormAdd_Click);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Image = global::SWA.Properties.Resources.print;
+            this.buttonPrint.Location = new System.Drawing.Point(188, 3);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(31, 26);
+            this.buttonPrint.TabIndex = 11;
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,5 +415,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.Button buttonStudentDocuments;
         private System.Windows.Forms.Button buttonReloadFilter;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }
