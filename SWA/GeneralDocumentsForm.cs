@@ -53,6 +53,7 @@ namespace SWA
 
         private void GeneralDocumentsForm_Load(object sender, EventArgs e)
         {
+            buttonReload_Click(sender, e);
             metroTabControl1_SelectedIndexChanged(sender, e);
         }
 

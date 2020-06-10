@@ -20,7 +20,7 @@ namespace SWA
         public StudentDocumentsForm()
         {
             InitializeComponent();
-            dateTimePickerDateFilter.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            dateTimePickerDateFilter.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());            
         }
 
         public DataTable StudentDocumentsTable(List<StudentDocument> query)
@@ -54,6 +54,7 @@ namespace SWA
 
         private void StudentDocumentsForm_Load(object sender, EventArgs e)
         {
+            buttonReload_Click(sender, e);
             metroTabControl1_SelectedIndexChanged(sender, e);
         }
 

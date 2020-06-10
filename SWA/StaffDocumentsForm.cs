@@ -54,6 +54,7 @@ namespace SWA
 
         private void StaffDocumentsForm_Load(object sender, EventArgs e)
         {
+            buttonReload_Click(sender, e);
             metroTabControl1_SelectedIndexChanged(sender, e);
         }
 
