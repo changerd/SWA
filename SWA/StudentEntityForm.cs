@@ -24,6 +24,9 @@ namespace SWA
         {
             InitializeComponent();
             dateTimePickerBirth.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            dateTimePickerDateA.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            dateTimePickerDateG.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            dateTimePickerDateO.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
         void GetGroups()

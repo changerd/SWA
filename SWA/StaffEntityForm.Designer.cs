@@ -125,7 +125,7 @@
             this.metroComboBoxPosition.ItemHeight = 23;
             this.metroComboBoxPosition.Location = new System.Drawing.Point(143, 92);
             this.metroComboBoxPosition.Name = "metroComboBoxPosition";
-            this.metroComboBoxPosition.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBoxPosition.Size = new System.Drawing.Size(297, 29);
             this.metroComboBoxPosition.TabIndex = 8;
             // 
             // dateTimePickerBirth

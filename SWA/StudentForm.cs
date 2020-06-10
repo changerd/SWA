@@ -410,6 +410,9 @@ namespace SWA
                         string gname = dataGridViewStudent.SelectedCells[4].Value.ToString();
                         var student = await context.Students.FindAsync(sId);
                         var group = await context.Groups.FirstOrDefaultAsync(g => g.GroupName == gname);
+                        var sdocuments = context.StudentDocuments.Where(s => s.StudentId == sId);
+                        context.StudentDocuments.RemoveRange(sdocuments);
+                        await context.SaveChangesAsync();
                         context.Entry(student).State = EntityState.Deleted;
                         await context.SaveChangesAsync();
                         group.GroupCount = context.Groups.FirstOrDefault(g => g.GroupName == gname).Students.Count;
